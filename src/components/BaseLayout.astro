@@ -1,0 +1,39 @@
+---
+import Header from "./Header.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/7c6fcbeabe.js" crossorigin="anonymous"></script>
+    	<title>Christine & Andy | Home</title>
+		<title>Astro</title>
+	</head>
+	<body>
+		<Header />	
+		  <main class="text-size-normal">
+
+            <slot />
+
+          </main>
+		  <footer>
+			<nav>
+			  <ul>
+				<ul>
+				  <li><a href="schedule.html">Schedule</a></li>
+				  <li><a href="accomodations.html">Accomodations</a></li>
+				  <li><a href="registry.html">Registry</a></li>
+				</ul>
+			  </ul>
+			</nav>
+		  </footer>
+		  
+	</body>
+</html>

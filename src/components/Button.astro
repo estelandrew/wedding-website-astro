@@ -1,0 +1,38 @@
+---
+const { link, type } = Astro.props;
+---
+
+<span class={`btn btn-${type}`}>
+    <a href={link} target="_blank">
+        <slot />        
+    </a>
+</span>
+
+<style lang="scss">
+    span.btn {
+        display: inline-block;
+        margin-top: 1rem;
+        background-color: #5f8575;
+        min-width: 12rem;
+        padding: 0.5rem;
+        color: #fff;
+        border-radius: 5px;
+
+        &-rsvp {
+            background-color: #f68d6f;
+            min-width: auto;
+            width: 7rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }    
+
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+            transition: 250ms;
+        }
+}
+</style>

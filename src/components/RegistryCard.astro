@@ -24,13 +24,8 @@ const { img, link } = Astro.props;
         border: 1px solid #ddd;
         border-radius: 10px;
         padding: 1rem;
-        position: relative;
-        &-inner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+        display:flex;
+        align-items: center;
         img {
             width: 100%;
             height: auto;

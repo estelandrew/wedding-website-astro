@@ -8,8 +8,8 @@ import cb from "../img/cratebarrel.svg.png";
 ---
 
 <BaseLayout pageTitle="Registry">
-    <div class="reg-wrapper">
-        <h2 class="fancy">Registry</h2>
+    <h2 class="fancy">Registry</h2>
+    <div class="reg-wrapper">        
         <RegistryCard img={{src: cb, alt: "Crate and Barrel"}} link="https://www.crateandbarrel.com/gift-registry/christine-metzger-and-andy-sims/r6421049" />
         <RegistryCard img={{src: bbb, alt: "Bed Bath & Beyond"}} link="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/550985693?eventType=Wedding" />
         <RegistryCard img={{src: amazon, alt: "Amazon"}} link="https://www.amazon.com/wedding/christine-metzger-andy-sims-cincinnati-oh-june-2022/registry/1XC0RGH3WNK9L" />
@@ -17,15 +17,15 @@ import cb from "../img/cratebarrel.svg.png";
 </BaseLayout>
 
 <style lang="scss">
-    div.reg-wrapper {
+    h2 {
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid #f68d6f;
+        width: 15rem;
+        margin: 0 auto 1rem auto;
         padding-top: 2rem;
-        margin: 0 auto;        
-        h2 {
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #f68d6f;
-            width: 15rem;
-            margin: 0 auto 1rem auto;
-        }
+    }
+    div.reg-wrapper {        
+        margin: 0 auto;       
         h3 {
             margin-bottom: 0.5rem;
         }        
@@ -34,6 +34,12 @@ import cb from "../img/cratebarrel.svg.png";
         }
         @media (min-width: 769px) {
             width: 40%;
-        }    }
+        }
+        @media (min-width: 1000px) {
+            width: 75%;
+            display: flex;
+            gap: 2rem;
+        }    
+    }
   
 </style>

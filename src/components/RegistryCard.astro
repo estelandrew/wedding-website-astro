@@ -1,0 +1,42 @@
+---
+import { Image } from "@astrojs/image/components";
+import cb from "../img/cratebarrel.svg.png";
+import Button from "./Button.astro";
+
+const { img, link } = Astro.props;
+---
+
+<div class="reg-container">
+    <div class="reg-container-inner">
+        <Image src={img.src} aspectRatio="{width}:{height}" alt={img.alt} />
+        <Button link={link} type="default">
+            Go to registry &rarr;
+        </Button>
+    </div>
+</div>
+
+<style lang="scss">
+    div.reg-container {
+        width: 66%;
+        height: 11rem;
+        max-width: 20rem;
+        margin: 2rem auto 0 auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 1rem;
+        position: relative;
+        &-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        span.btn {
+            margin-top: 1rem;
+        }
+    }
+</style>

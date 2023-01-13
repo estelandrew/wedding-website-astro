@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../components/BaseLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<BaseLayout pageTitle="Accomodations">
+    <div class="acco-wrapper">
+        <h2 class="fancy">Accomodations</h2>
+        <p>We have reserved a block of rooms at Hilton Garden Inn Cincinnati Northeast in Loveland, OH. Shuttle services will be available to and from the reception venue, before and after the event.</p>
+        <h3>Hotel:</h3>
+        <div>
+          Hilton Garden Inn Cincinnati Northeast<br>
+          6288 Tri Ridge Blvd,<br>
+          Loveland, OH 45140<br>
+          (513) 576-6999
+        </div>
+        <!-- <span class="btn"><a target="_blank" href="https://www.my-event.hilton.com/metzger-sims-wedding/">Go to website &rarr;</a></span
+        > -->
+        <Button link="https://www.my-event.hilton.com/metzger-sims-wedding/" type="default">
+			Go to website &rarr;
+		</Button>
+        <br />
+        <!-- <span class="btn"><a target="_blank" href="https://goo.gl/maps/ZxJmMqZsTEUQUmx17">View on map &rarr;</a></span> -->
+        <Button link="https://goo.gl/maps/ZxJmMqZsTEUQUmx17" type="default">
+			View on map &rarr;
+		</Button>
+      </div>
+</BaseLayout>
+
+<style lang="scss">
+    div.acco-wrapper {
+  padding-top: 2rem;
+  h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #f68d6f;
+    width: 15rem;
+    margin: 0 auto 1rem auto;
+  }
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    text-align: left; 
+    width: 90%;
+    margin: 0 auto;
+    @media (min-width: 769px) {
+      width: 66%;
+      max-width: 50rem;
+    }
+  }
+}
+</style>

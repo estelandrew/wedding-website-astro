@@ -7,10 +7,9 @@ import Button from '../components/Button.astro';
 import ring from '../img/ring.jpg';
 import ourStory from '../img/our-story.jpg';
 import footerImage from '../img/footer.jpg';
-import '../styles/global.scss';
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle="Home">
 	<Hero />
 	<HomeSection img={{src: ring, altText: "Engagement ring"}} reversed={false}>
 		<h2 class="fancy">When & Where</h2>

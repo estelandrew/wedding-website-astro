@@ -1,5 +1,8 @@
 ---
 import Header from "./Header.astro";
+import '../styles/global.scss';
+
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -13,7 +16,7 @@ import Header from "./Header.astro";
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/7c6fcbeabe.js" crossorigin="anonymous"></script>
-    	<title>Christine & Andy | Home</title>
+    	<title>Christine & Andy | {pageTitle}</title>
 		<title>Astro</title>
 	</head>
 	<body>
@@ -27,9 +30,9 @@ import Header from "./Header.astro";
 			<nav>
 			  <ul>
 				<ul>
-				  <li><a href="schedule.html">Schedule</a></li>
-				  <li><a href="accomodations.html">Accomodations</a></li>
-				  <li><a href="registry.html">Registry</a></li>
+				  <li><a href="/schedule">Schedule</a></li>
+				  <li><a href="/accomodations">Accomodations</a></li>
+				  <li><a href="/registry">Registry</a></li>
 				</ul>
 			  </ul>
 			</nav>
